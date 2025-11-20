@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     description: "Create unique, personalized tattoo designs in seconds with the power of AI.",
     images: ["/og-image.jpg"],
   },
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({

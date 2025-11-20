@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,8 +25,13 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white group-hover:scale-110 transition-transform">
-            <Sparkles size={18} />
+          <div className="relative w-8 h-8 group-hover:scale-110 transition-transform">
+            <Image 
+              src="/icon.png" 
+              alt="TattooGen Logo" 
+              fill
+              className="rounded-lg object-cover"
+            />
           </div>
           <span className="font-bold text-xl tracking-tight">TattooGen</span>
         </Link>

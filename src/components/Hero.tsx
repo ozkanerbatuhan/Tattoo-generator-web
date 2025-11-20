@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 
@@ -54,14 +55,21 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
             id="download"
           >
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-primary/25">
+            <Link 
+              href="https://apps.apple.com" 
+              target="_blank"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-primary/25"
+            >
               <Download size={20} />
               Download App
-            </button>
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-gray-200 text-gray-900 font-semibold text-lg hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-2">
+            </Link>
+            <Link 
+              href="#features"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-gray-200 text-gray-900 font-semibold text-lg hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-2"
+            >
               Learn More
               <ArrowRight size={20} />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

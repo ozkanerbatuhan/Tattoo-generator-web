@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Sparkles, Twitter, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -8,8 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
-                <Sparkles size={18} />
+              <div className="relative w-8 h-8">
+                <Image 
+                  src="/icon.png" 
+                  alt="TattooGen Logo" 
+                  fill
+                  className="rounded-lg object-cover"
+                />
               </div>
               <span className="font-bold text-xl tracking-tight">TattooGen</span>
             </Link>
